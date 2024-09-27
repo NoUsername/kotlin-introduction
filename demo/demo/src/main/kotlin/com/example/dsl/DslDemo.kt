@@ -3,15 +3,12 @@ package com.example.dsl
 import org.springframework.validation.MapBindingResult
 
 data class UserSignup(
-        val name: String,
-        val email: String,
+    val name: String,
+    val email: String,
 )
 
 fun main() {
-    val input = UserSignup(
-            "a",
-            "a@some"
-    )
+    val input = UserSignup("a", "a@some")
 
     classicalValidation(input)
     dslValidat(input)
